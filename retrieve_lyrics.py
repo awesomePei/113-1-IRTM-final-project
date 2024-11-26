@@ -1,9 +1,9 @@
 import lyricsgenius
 import os
-token = ""
-genius = lyricsgenius.Genius("vA-48-tnwsjbFrApAtD3-Cp2TOfJBKcJsoCt0U8zyy66ME2Fj9XjK-0am1VKr5pg")
+token = ""  # 這裡放 token
+genius = lyricsgenius.Genius(token)
 
-# Disable unnecessary logs (optional)
+# 清理 data
 genius.skip_non_songs = True  # Skip non-song items like interviews
 genius.excluded_terms = ["(Remix)", "(Live)"]  # Exclude certain song types
 genius.remove_section_headers = True  # Clean up lyrics by removing headers
@@ -33,6 +33,6 @@ def save_all_lyrics_by_artist(artist_name):
             file.write(f"{song.title}\n\n{song.lyrics}")
         print(f"Saved lyrics of '{song.title}' to '{file_path}'.")
 
-# Specify the artist name
+# 這邊要改歌手名
 artist_name = "Alecia Beth Moore"  # Replace with your desired artist
 save_all_lyrics_by_artist(artist_name)
