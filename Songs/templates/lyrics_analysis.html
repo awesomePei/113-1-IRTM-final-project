@@ -6,8 +6,8 @@
     <title>Lyrics Emotion Analysis</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f9fc;
+            font-family: 'Arial', sans-serif;
+            background-color: #eef3f8;
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,42 +20,52 @@
 
         h1 {
             font-size: 2.5rem;
+            text-align: left;
             color: #185091;
             margin-bottom: 20px;
         }
 
+        form {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
         textarea {
+            width: 100%;
             padding: 12px;
             font-size: 1rem;
             border-radius: 8px;
             border: 1px solid #ccc;
-            width: 80%;
-            max-width: 600px;
-            margin-bottom: 20px;
             box-sizing: border-box;
             resize: none;
-            background-color: #fff;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
         }
 
         button {
-            padding: 12px 30px;
-            font-size: 1.1rem;
+            width: 100%;
+            padding: 12px 0;
+            font-size: 1.2rem;
             color: #fff;
             background: linear-gradient(135deg, #185091, #357ab8);
             border: none;
-            border-radius: 30px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         button:hover {
             background: linear-gradient(135deg, #357ab8, #185091);
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         a {
-            display: block;
-            margin-top: 20px;
+            display: inline-block;
+            margin-top: 15px;
             font-size: 1rem;
             color: #185091;
             text-decoration: none;
@@ -68,9 +78,9 @@
     </style>
 </head>
 <body>
-    <h1>輸入歌詞進行情緒分析</h1>
+    <h1>情緒分析</h1>
     <form action="/lyrics-analysis" method="post">
-        <textarea name="lyrics" rows="5" placeholder="輸入歌詞"></textarea>
+        <textarea name="lyrics" rows="5" placeholder="輸入歌詞..."></textarea>
         <button type="submit">分析</button>
     </form>
     <a href="/">返回首頁</a>
