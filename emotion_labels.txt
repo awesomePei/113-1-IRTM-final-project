@@ -1,24 +1,8 @@
-Ecstacy
-Joy
-Serenity
-Admiration
-Trust
-Acceptance
-Terror
-Fear
-Apprehension
-Amazement
-Surprise
-Distraction
-Grief
-Sadness
-Pensiveness
-Loathing
-Disgust
-Boredom
-Rage
-Anger
-Annoyance
-Vigilance
-Anticipation
-Interest
+1-Ecstacy(Joy, Serenity)
+2-Admiration(Trust, Acceptance)
+3-Terror(Fear, Apprehension)
+4-Amazement(Surprise, Distraction)
+5-Grief(Sadness, Pensiveness)
+6-Loathing(Disgust, Boredom)
+7-Rage(Anger, Annoyance)
+8-Vigilance(Anticipation, Interest)

@@ -1,4 +1,4 @@
-import lyricsgenius
+import lyricsgenius # type: ignore
 import os
 token = ""  # 這裡放 token
 genius = lyricsgenius.Genius(token)
