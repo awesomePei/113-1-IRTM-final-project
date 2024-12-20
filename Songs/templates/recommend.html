@@ -7,36 +7,66 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f9fc;
+            background: linear-gradient(135deg, #e3f2fd, #f7f9fc);
             margin: 0;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            min-height: 100vh;
+            color: #333;
         }
 
         h1 {
+            font-size: 2.5rem;
             color: #185091;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         li {
             background: #ffffff;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            text-align: left;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .song-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #185091;
+        }
+
+        .song-score {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
         }
 
         a {
+            display: inline-block;
             margin-top: 15px;
             font-size: 1rem;
             color: #185091;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
@@ -49,7 +79,10 @@
     {% if songs %}
         <ul>
             {% for song in songs %}
-                <li>{{ song.title }} - 分數: {{ song.score }}</li>
+                <li>
+                    <span class="song-title">{{ song.title }}</span>
+                    <span class="song-score">分數: {{ song.score }}</span>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
