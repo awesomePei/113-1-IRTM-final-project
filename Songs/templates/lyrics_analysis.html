@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Emotion Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #185091;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            resize: none;
+            background-color: #fff;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            color: #fff;
+            background: linear-gradient(135deg, #185091, #357ab8);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #357ab8, #185091);
+            transform: scale(1.05);
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #185091;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #357ab8;
+        }
+    </style>
+</head>
+<body>
+    <h1>輸入歌詞進行情緒分析</h1>
+    <form action="/lyrics-analysis" method="post">
+        <textarea name="lyrics" rows="5" placeholder="輸入歌詞"></textarea>
+        <button type="submit">分析</button>
+    </form>
+    <a href="/">返回首頁</a>
+</body>
+</html>

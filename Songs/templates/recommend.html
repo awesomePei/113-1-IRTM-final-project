@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #185091;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #ffffff;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: left;
+        }
+
+        a {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #185091;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #357ab8;
+        }
+    </style>
+</head>
+<body>
+    <h1>根據 "{{ emotion }}" 推薦的歌曲</h1>
+    {% if songs %}
+        <ul>
+            {% for song in songs %}
+                <li>{{ song.title }} - 分數: {{ song.score }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>沒有符合的歌曲。</p>
+    {% endif %}
+    <a href="/">返回首頁</a>
+</body>
+</html>
