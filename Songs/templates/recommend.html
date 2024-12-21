@@ -76,18 +76,17 @@
 </head>
 <body>
     <h1>根據 "{{ emotion }}" 推薦的歌曲</h1>
+    <a href="/">返回首頁</a>
     {% if songs %}
         <ul>
             {% for song in songs %}
                 <li>
-                    <span class="song-title">{{ song.title }}</span>
-                    <span class="song-score">分數: {{ song.score }}</span>
+                    <a href="/song/{{ song.id }}">{{ song.title }}</a>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
         <p>沒有符合的歌曲。</p>
     {% endif %}
-    <a href="/">返回首頁</a>
 </body>
 </html>

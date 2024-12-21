@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ song.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #f7f9fc);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            min-height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            color: #185091;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            text-align: left;
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(45deg, #185091, #357ab8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #357ab8, #185091);
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ song.title }}</h1>
+    <p><strong>情緒分類：</strong> {{ song.emotion }}</p>
+    <p>歌詞</p>
+    <pre>{{ song.lyrics }}</pre>
+
+    <div class="buttons">
+        <!-- 返回推薦頁面 -->
+        <a href="/recommend?emotion={{ song.emotion }}" class="button">返回推薦頁面</a>
+
+        <!-- 返回首頁 -->
+        <a href="/" class="button">回到首頁</a>
+    </div>
+</body>
+</html>
